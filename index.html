@@ -1,101 +1,179 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>infomindUX</title>
 
-    <title>Default</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <!-- javaScript  -->
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/common.js"></script>
-</head>
+        <style>
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
 
-<body>
-    <!-- S:skip_navi -->
-    <div class="skip_navi">
-        <a class="sr-only sr-only-focusable" href="#header">메뉴 바로가기</a>
-        <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
-        <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
-    </div>
-    <!-- E:skip_navi -->
-    <!-- S:header -->
-    <header id="header">
-        <div class="util_wrap">
-            <ul class="util_menu">
-                <li><a href="">회원가입</a></li>
-                <li><a href="">사이트맵</a></li>
-            </ul>
+            body {
+                min-width: 320px;
+                font-size: 0;
+                text-align: center;
+                padding: 0 20px;
+                background: #eee;
+            }
+
+            @media (min-width:980px) {
+                body {
+                    text-align: left;
+                }
+            }
+
+            h1 {
+                margin: 50px 0;
+                font-size: 70px;
+                font-weight: 100;
+            }
+
+            h1 small {
+                display: inline-block;
+                color: #777;
+            }
+
+            .memo {
+                font-size: 16px;
+                background: #ccc;
+                border-radius: 25px;
+                padding: 20px 30px 30px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            h2 {
+                margin: 30px 0 20px;
+                font-size: 30px;
+                font-weight: 600;
+
+            }
+
+            h3 {
+                margin: 10px 0 0;
+                font-size: 20px;
+                font-weight: 600;
+
+            }
+
+            a {
+                display: inline-block;
+                font-size: 16px;
+                background: #444;
+                border-radius: 0 25px 25px 25px;
+                width: calc((100% - 30px) / 4);
+                padding: 20px;
+                margin: 0 10px 10px 0;
+                text-align: left;
+                color: #fff !important;
+                text-decoration: none;
+
+                -webkit-transition: all 0.1s ease;
+                -moz-transition: all 0.1s ease;
+                -o-transition: all 0.1s ease;
+                -ms-transition: all 0.1s ease;
+                transition: all 0.1s ease;
+
+            }
+
+            a:last-of-type {
+                margin-right: 0;
+            }
+
+            a:active,
+            a:hover {
+                background: #333;
+                -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+                border-radius: 25px;
+            }
+
+            @media (max-width:979px) {
+                a {
+                    width: 100%;
+                    margin: 0 10px 10px 0;
+
+                }
+
+            }
+
+            hr {
+                display: block;
+                width: 100%;
+                max-width: 400px;
+                margin: 20px auto;
+                border: none;
+            }
+
+            strong {
+                color: #5bc0de;
+                display: block;
+                font-size: 20px;
+                font-weight: 600;
+                border-bottom: 1px solid #666;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .co {
+                font-size: 24px;
+                position: absolute;
+                right: 30px;
+                top: 10px;
+                margin: 0;
+                color: #999;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>PROJECT
+            <small>프로젝트명</small>
+        </h1>
+
+        <h2>INCLUDE</h2>
+        <div class="memo">
+            <p>git : https://github.com/rhkanrdl/infomindUX</p>
+            <p>memo</p>
+
         </div>
-        <h1>Logo</h1>
-        <!-- S:main_menu -->
-        <nav id="main_menu">
 
-            <!-- 메뉴유형 퍼블리셔 택1
-            <h2><a href="">소개</a></h2>
-            <h2><a href="">소개</a></h2>
-            <h2><a href="">소개</a></h2>
-            <h2><a href="">소개</a></h2>
-            <h2><a href="">소개</a></h2>
-          -->
-            <ul>
-                <li>
-                    <h2><a href="">소개</a></h2></li>
-                <li>
-                    <h2><a href="">메인1</a></h2></li>
-                <li>
-                    <h2><a href="">메인2</a></h2></li>
-                <li>
-                    <h2><a href="">메인3</a></h2></li>
-            </ul>
-        </nav>
-        <!-- E:main_menu -->
-    </header>
-    <!-- E:header -->
-    <!-- S:mainContent -->
-    <article id="mainContent">
-        <h3 class="sr-only">제목</h3>
-        <section class="">
-            <h4 class="sr-only">기본 버튼</h4>
-            <div class="btn-area">
-                <a class="btn btnS default" href="">버튼 <i class="fa fa-map-marker"></i></a>
-                <a class="btn btnS main" href="">버튼</a>
-                <a class="btn btnS sub" href="">버튼</a>
-                <a class="btn btnS extra" href="">버튼</a>
-            </div>
-            <div class="btn-area">
-                <a class="btn btnM default" href="">버튼</a>
-                <a class="btn btnM main" href="">버튼</a>
-                <a class="btn btnM sub" href="">버튼</a>
-                <a class="btn btnM extra" href="">버튼</a>
-            </div>
-            <div class="btn-area">
-                <a class="btn btnB default" href="">버튼</a>
-                <a class="btn btnB main" href="">버튼</a>
-                <a class="btn btnB sub" href="">버튼</a>
-                <a class="btn btnB extra" href="">버튼</a>
-            </div>
-            <div class="btn-area">
-                <a class="btn btnF main" href="">버튼</a>
-            </div>
-        </section>
-        <section class="">
-            <h4 class="sr-only">소제목</h4> 본문내용2
-        </section>
-        <section class="">
-            <h4 class="sr-only">소제목</h4> 본문내용3
-        </section>
-    </article>
-    <!-- E:mainContent -->
-    <!-- S:footer -->
-    <footer id="footer">
-        <address>주소</address>
-    </footer>
-    <!-- E:footer -->
-</body>
+        <div>
+            <h2>MAIN</h2>
+
+            <a href="main.html">
+                <strong>메인</strong>
+                main.html</a>
+                
+            <!--<a href="sub-search.html">
+                <strong>검색결과</strong>
+                sub-search.html</a> -->
+        </div>
+
+        <!--<div>
+            <h2>THEME</h2>
+
+            <a href="sub-theme-list.html">
+                <strong>리스트</strong>
+                sub-theme-list.html</a> -->
+        </div>
+
+        <p class="co">ⓒ INFOMIND</p>
+
+    </body>
 
 </html>
