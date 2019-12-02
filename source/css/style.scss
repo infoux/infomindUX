@@ -24,19 +24,17 @@ $screen-size-pc : 1200px;
     strong {
         display:inline-block;
         vertical-align:top;
-        font-size: rem(10px);
+        font: rem(10px)/rem(22px); // font-size/line-height
         color: #555;
         border: 1px solid #e2e2e2;
         width: rem(22px);
         height: rem(22px);
-        line-height: rem(22px);
         margin: rem(0 1px);
 
-        @media all and ($screen-size-pc) {
-            font-size: 14px;
+        @media only screen and ($screen-size-pc) {
+            font: 14px/32px; // font-size/line-height
             width: 32px;
             height: 32px;
-            line-height: 32px;
             margin: 0 2px;
         }
 
@@ -47,7 +45,7 @@ $screen-size-pc : 1200px;
             i {
                 font-size: rem(10px);
                 
-                @media all and ($screen-size-pc) {
+                @media only screen and ($screen-size-pc) {
                     font-size: 14px;
                 }
 
@@ -61,7 +59,7 @@ $screen-size-pc : 1200px;
 
             i {
                 &::before {
-                    @include mapazero;
+                    @include pmz(0,0);
                     width:auto;
                 }
             }
@@ -112,6 +110,8 @@ html {
     min-height: 100%;
 }
 
+
+
 @media (max-width:360px) {
     html {
         font-size: 14px;
@@ -140,7 +140,7 @@ body {
 }
 
 .sr-only {
-    position: absoute !important;
+    position: absolute !important;
     overflow: hidden !important;
     width: 1px !important;
     height: 1px !important;
@@ -170,8 +170,8 @@ body {
         vertical-align:top;
         padding:rem(0 10px);
 
-        @media all and (min-width: 1200px) {
-            @include container(1200px);
+        @media only screen and ($screen-size-pc) {
+            @include container($screen-size-pc);
             padding: 0;
         }
     }
