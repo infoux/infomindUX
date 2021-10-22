@@ -7,39 +7,6 @@
     -webkit-justify-content: center;
 }
 
-@mixin full {
-    width: 100%;
-    height: 100%;
-}
-
-@mixin pmz($padding, $margin) {
-    margin: $margin;
-    padding: $padding;
-}
-
-@mixin full-position {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-@mixin zero {
-    font-size:0;
-}
-
-@mixin fsize($fsize) {
-    font-size: $fsize;
-    line-height: $fsize * 1.4;
-}
-
-@mixin border($width, $color, $border-style: solid) {
-    border: {
-        width: $width;
-        color: $color;
-        style: $border-style;
-    }
-}
 
 @mixin box-sizing ($type:border-box) {
     -webkit-box-sizing: $type;
@@ -115,50 +82,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-@mixin placeholder($size, $color) {
-
-
-
-    &::-webkit-input-placeholder {
-        color: $color;
-        font-size: rem($size);
-
-        @media all and ($screen-size-pc) {
-            font-size: $size;
-        }
-
-    }
-
-    &:-moz-placeholder {
-        color: $color;
-        font-size: rem($size);
-
-        @media all and ($screen-size-pc) {
-            font-size: $size;
-        }
-    }
-
-    &::-ms-input-placeholder {
-        color: $color;
-        font-size: rem($size);
-
-        @media all and ($screen-size-pc) {
-            font-size: $size;
-        }
-    }
-}
-
-@mixin backcover($background) {
-    background: {
-        image: $background;
-        repeat: no-repeat;
-        size: cover;
-        width: 100%;
-        height: auto;
-        position:center center;
-    }
 }
 
 
